@@ -1,0 +1,63 @@
+.card{
+    // visibility: hidden;
+    align-self: center;
+
+    z-index: 10;
+    grid-area: card;
+
+    // width: 40rem;
+    // background-color: blueviolet;
+
+    animation: zip 2s ease-in-out infinite, bob 2s 2s ease-in-out infinite;  
+
+  
+    // border: 2px solid #f1f6;
+
+   
+
+    &-container{
+
+    padding: 7rem;
+    width: 40rem;
+    height: 40rem;
+
+    background-color: #f3f3;
+    border-radius: 50%;
+    box-shadow: -8rem -2rem 10rem #fff ;
+    animation: grow 2s ease-in-out ;  
+
+    
+
+        display: flex;
+        flex-flow: column;
+        justify-content: space-between;
+        align-items: center;
+
+    }   
+
+    &-image{
+        width: 70%;
+        border-radius: 5rem;
+        border: 2px solid #f1f6;
+
+    }
+    
+    &__details{
+        text-align: center;
+        color:#fff;
+        text-shadow: .4rem .4rem .3rem #000;       
+    
+    &-name{
+        font-size: 3rem;
+        font-weight:400;
+        
+
+    }
+
+    &-text{
+        font-size: 2rem;
+        font-weight:300;
+    }
+    }
+}
+

@@ -1,0 +1,12 @@
+.portal{
+    align-self: center;
+    z-index: -1;
+    grid-area: portal;
+
+
+
+    &-image{
+        width: 100%;
+        
+    }
+ }

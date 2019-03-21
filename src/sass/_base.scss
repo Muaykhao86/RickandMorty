@@ -1,0 +1,48 @@
+*,
+*::before,
+*::after{
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+html{
+    box-sizing: border-box;
+    font-size: 62.5%;
+    overflow: hidden;
+
+    background: url(../src/img/backgroundBox.jpg) center center no-repeat fixed;
+    background-size: cover;
+   
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+      "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+      sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+.container{
+
+    display: grid; 
+    gap:3rem;                                             
+    
+    
+    grid-template-columns: repeat(6, 1fr);
+        
+    grid-template-rows: 20vh 80vh;
+        
+    grid-template-areas:
+    "...... header header header header ......" 
+    "portal portal  card   card   box     box";
+    
+    grid-auto-rows: 10rem;
+    // grid-area: 
+    // width: 90%;
+//  & > *{//testing
+//      padding: 4rem;
+//      font-size: 3rem;
+//  }
+}
