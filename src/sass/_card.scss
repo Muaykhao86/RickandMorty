@@ -1,10 +1,9 @@
 .card{
-    // visibility: hidden;
-    align-self: center;
     justify-content: center;
 
     z-index: 10;
     grid-area: card;
+    transform: translateY(-3rem);
 
     // width: 40rem;
     // background-color: blueviolet;
