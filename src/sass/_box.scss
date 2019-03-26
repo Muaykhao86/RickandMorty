@@ -40,14 +40,10 @@
     &, 
     &:link, 
     &:visited, 
-    &:active{
-        background-color: transparent;
-        text-decoration: none;
-
-
-       
-
-
+    &:active, 
+    &:focus{
+    background-color: transparent;
+    text-decoration: none;
     border: none;
     cursor: pointer;
     }
