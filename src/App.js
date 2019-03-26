@@ -23,7 +23,7 @@ class App extends Component{
       }
     getCharecter = () => {
       const random = Math.floor(Math.random() * 394);
-      const url = `http://rickandmortyapi.com/api/character/${random}/`;
+      const url = `https://rickandmortyapi.com/api/character/${random}/`;
       const portalGun = this.openPortal();
       const showCard = this.cardIsSet();
       const takeCard = this.resetChar();
