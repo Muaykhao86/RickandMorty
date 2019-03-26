@@ -28,6 +28,8 @@ html{
     box-sizing: border-box;
     font-size: 62.5%;
     overflow: hidden;
+    height: 100vh;
+    width: 100vw;
 
     background: url(../src/img/backgroundBox.jpg) 80% 10% no-repeat fixed;
     background-size: cover;
@@ -84,10 +86,10 @@ body {
       "...... header header header header ......" 
       "......  ....  ....   ....   ....  ...."
       "......  ....  ....   ....    ....  ...."
-      "......  ....   ....   ....   box  box"
-      "portal  card   card   card   box  box"
-      "portal  card   card   card   box  box"
       "......  card   card   card   box  box"
+      "portal  card   card   card   box  box"
+      "portal  card   card   card   box  box"
+      "......  ....   ....   ....   box  box"
 
 
     }
