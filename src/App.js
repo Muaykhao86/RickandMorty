@@ -4,61 +4,63 @@ import Box from './components/Box';
 import Portal from './components/Portal';
 import Header from './components/Header';
 
+let charTime = ''; 
+let portTime = '';
+
 const initialState = {
 name: '',
 image:'',
 universe:'',
 showPort: false,
 showChar: false,
+
 };
 
 class App extends Component{
     constructor(){
         super()
         this.state=initialState;
-    
-    }
+      }
     getCharecter = () => {
-        const random = Math.floor(Math.random() * 394);
-        const url = `https://rickandmortyapi.com/api/character/${random}/`;
-        const portalGun = this.openPortal();
-        const cardTimer = this.cardIsSet();
-          return(
-            portalGun,
-            cardTimer,
-            fetch(url)
-            .then(response => response.json())
-            .then(char => this.setState({name:char.name, image: char.image, universe:[random + 135], showChar:true}))
-            )
+      const random = Math.floor(Math.random() * 394);
+      const url = `https://rickandmortyapi.com/api/character/${random}/`;
+      const portalGun = this.openPortal();
+      const showCard = this.cardIsSet();
+      const takeCard = this.resetChar();
+      const closePortal = this.resetPortal();
+      
+      
+      return(
+        fetch(url)
+        .then(response => response.json())
+        .then(char => this.setState({name:char.name, image: char.image, universe:[random + 135], showChar:true})),
+        portalGun,
+        showCard,
+        takeCard,
+        closePortal
+        )
       }
       
       resetPortal = () => {
-        const portTime = setTimeout(()=>{this.setState({showPort: false})}, 4000);
-         return this.state.showPort === true && this.state.showChar === true ? 
-         portTime: null;
-        }
-      resetChar = () => {
-          const charTime = setTimeout(()=>{this.setState({showChar: false})}, 8000);
-         return   this.state.showChar === true && this.state.showPort === true ? charTime: null
-        }
-
-      componentDidmount() {
-          
-          clearTimeout(this.charTime);
-         this.resetChar();
-        this.resetPortal();  
+        clearTimeout(portTime);
+        portTime = setTimeout(()=> {this.setState({showPort: false})}, 10000);
       }
-      openPortal = () => {
+      resetChar = () => {
+        clearTimeout(charTime);
+        charTime = setTimeout(()=> {this.setState({showChar: false})}, 8000);
+        }
+        
+        openPortal = () => {
           return this.state.showPort === false ?  this.setState({showPort: true}): null;
         }
         
         cardIsSet = () => {
-    
-       return this.state.showChar === false ?  this.setState({showChar: true}): null;
-          }
+          return this.state.showChar === false && this.state.image ?  this.setState({showChar: true}): null;
+        }
         
-    render() {
-
+       
+        render() {
+          console.log({portTime}, {charTime});
         return(
             <div className="container">
             <Header/>

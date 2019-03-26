@@ -1,3 +1,21 @@
+@mixin respond($breakpoint){
+  @if $breakpoint == phone{
+      @media only screen and (max-width:37.5em) {@content}; //600px
+  }
+  @if $breakpoint == tab-port{
+      @media only screen and (max-width:56.25em) {@content}; //900px
+  }
+  @if $breakpoint == tab-land{
+      @media only screen and (max-width:75em) {@content}; //1200px
+  }
+  @if $breakpoint == big-desktop{
+      @media only screen and (min-width:112.5em) {@content}; //1800px
+  }
+
+}
+
+
+
 *,
 *::before,
 *::after{
@@ -11,8 +29,22 @@ html{
     font-size: 62.5%;
     overflow: hidden;
 
-    background: url(../src/img/backgroundBox.jpg) center center no-repeat fixed;
+    background: url(../src/img/backgroundBox.jpg) 80% 10% no-repeat fixed;
     background-size: cover;
+
+    @include respond(tab-land){ // width < 1200px //
+      font-size:56.25%; // 1rem = 9px, 9/16 = 0.5625 / 56.25%
+  }
+  
+    @include respond(tab-port){ // width < 900px // cascading - the last one is taken when conflicting and its the smallest so thats what we want as they are all smaller than the above
+      font-size:50%; // 1rem = 8px, 8/16 = 0.50 / 50%
+
+    }
+  
+ 
+    @include respond(big-desktop){ // width > 1800px This can be where ever as it will only get trigggered above 1880px which will obviously not be < 1200px
+      font-size: 75%; // 1rem = 12px, 12/16 = 0.75 / 75%
+    }
    
 }
 
@@ -39,10 +71,25 @@ body {
     "portal portal  card   card   box     box";
     
     grid-auto-rows: 10rem;
-    // grid-area: 
-    // width: 90%;
-//  & > *{//testing
-//      padding: 4rem;
-//      font-size: 3rem;
-//  }
+    
+
+  
+    @include respond(phone){ 
+
+    grid-template-rows: auto;
+
+    gap: 0;
+
+    grid-template-areas:
+      "...... header header header header ......" 
+      "......  ....  ....   ....   ....  ...."
+      "......  ....  ....   ....    ....  ...."
+      "......  ....   ....   ....   box  box"
+      "portal  card   card   card   box  box"
+      "portal  card   card   card   box  box"
+      "......  card   card   card   box  box"
+
+
+    }
+ 
 }

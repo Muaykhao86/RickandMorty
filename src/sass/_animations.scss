@@ -24,10 +24,12 @@
 }
 
 @keyframes zip {
-    0% {
-      transform: translateX(-30vw);
-    }
-    100% {
-        transform: translateX(0);
-    } 
+  0% {
+    transform: translateX(-30vw);
+   
+  }
+  100% {
+      transform: translateX(0);
+  } 
 }
+
