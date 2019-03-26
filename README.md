@@ -1,4 +1,4 @@
-A Rick and Morty Charecter generator!
+A Rick and Morty Character generator!
 
 Build with 
 
