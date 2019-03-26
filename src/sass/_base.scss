@@ -85,11 +85,10 @@ body {
     grid-template-areas:
       "...... header header header header ......" 
       "......  ....  ....   ....   ....  ...."
-      "......  ....  ....   ....    ....  ...."
-      "......  card   card   card   box  box"
-      "portal  card   card   card   box  box"
-      "portal  card   card   card   box  box"
-      "......  ....   ....   ....   box  box"
+      "..... ....  ....   ....   ....  ...."
+      "......  card   card   card   card  card"
+      "portal  card   card   card   card  card"
+      "...... ....   ....   ....   box  box"
 
 
     }

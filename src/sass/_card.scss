@@ -1,6 +1,7 @@
 .card{
     // visibility: hidden;
     align-self: center;
+    justify-content: center;
 
     z-index: 10;
     grid-area: card;
@@ -8,7 +9,11 @@
     // width: 40rem;
     // background-color: blueviolet;
 
-    animation: zip 2s ease-in-out infinite, bob 2s 2s ease-in-out infinite;  
+    animation: zip 2s ease-in-out , bob 2s 2s ease-in-out infinite;  
+
+    @include respond(phone){ 
+    animation: zipy 2s ease-in-out , bob 2s 2s ease-in-out infinite; 
+    }
 
   
     // border: 2px solid #f1f6;
@@ -26,12 +31,20 @@
     box-shadow: -8rem -2rem 10rem #fff ;
     animation: grow 2s ease-in-out ;  
 
+    display: flex;
+    flex-flow: column;
+    justify-content: space-between;
+    align-items: center;
+
+    @include respond(phone){ 
+       padding: 5rem;
+       margin: 1rem;
+       width: 30rem;
+       height: 30rem;
+        }
+
     
 
-        display: flex;
-        flex-flow: column;
-        justify-content: space-between;
-        align-items: center;
 
     }   
 
@@ -39,6 +52,9 @@
         width: 70%;
         border-radius: 5rem;
         border: 2px solid #f1f6;
+        @include respond(phone){ 
+            width: 60%;
+             }
 
     }
     
@@ -50,6 +66,10 @@
     &-name{
         font-size: 3rem;
         font-weight:400;
+
+        @include respond(phone){ 
+            font-size: 2rem;
+             }
         
 
     }

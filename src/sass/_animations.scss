@@ -32,4 +32,13 @@
       transform: translateX(0);
   } 
 }
+@keyframes zipy {
+  0% {
+    transform: translateX(-40vw);
+   
+  }
+  100% {
+      transform: translateX(0);
+  } 
+}
 
