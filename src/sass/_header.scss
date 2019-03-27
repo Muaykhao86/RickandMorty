@@ -6,6 +6,10 @@
     align-items: center;
     &__img{
         width:60vw;
+
+        @include respond(big-desktop){ 
+            width: 70vw;
+        }
     }
 
     &__heading{
@@ -26,6 +30,11 @@
             top:10rem;
         }
 
+        @include respond(big-desktop){ 
+            top: 16rem;
+            right: 49rem;
+        }
+
      }
     &__heading-sub{
         
@@ -42,6 +51,12 @@
         @include respond(smlPhone){ // width < 600px // cascading - the last one is taken when conflicting and its the smallest so thats what we want as they are all smaller than the above
             top:15rem;
         }
+        @include respond(big-desktop){ 
+            top: 20rem;
+            right: 50rem;
+            font-size: 3rem;
+        }
+       
 
      }
 }

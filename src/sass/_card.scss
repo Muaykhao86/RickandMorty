@@ -7,6 +7,10 @@
 
     animation: zip 2s ease-in-out , bob 2s 2s ease-in-out infinite;  
 
+    // @include respond(tab-port){ 
+    //     transform: translateY(30vw);
+
+    // }
     @include respond(phone){ 
     animation: zipy 2s ease-in-out , bob 2s 2s ease-in-out infinite; 
     }
