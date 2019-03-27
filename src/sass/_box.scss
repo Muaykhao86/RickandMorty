@@ -6,6 +6,19 @@
     top: 60%;
     right: 38%;
 
+    &, 
+    &:link, 
+    &:visited, 
+    &:focus,
+    &:active 
+    {
+    background-color: transparent;
+    text-decoration: none;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    color: transparent;
+    }
 
 
     @include respond(tab-land){ // width < 1200px //
