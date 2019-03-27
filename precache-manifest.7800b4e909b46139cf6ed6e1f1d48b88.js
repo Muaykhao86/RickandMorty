@@ -12,7 +12,7 @@ self.__precacheManifest = [
     "url": "/RickandMorty/static/js/runtime~main.296dc086.js"
   },
   {
-    "revision": "25d59016c4756d66cf08",
+    "revision": "9c257ef1e42a6833eecb",
     "url": "/RickandMorty/static/js/main.b080a107.chunk.js"
   },
   {
@@ -20,11 +20,11 @@ self.__precacheManifest = [
     "url": "/RickandMorty/static/js/2.c37d9d9a.chunk.js"
   },
   {
-    "revision": "25d59016c4756d66cf08",
-    "url": "/RickandMorty/static/css/main.ce712d9d.chunk.css"
+    "revision": "9c257ef1e42a6833eecb",
+    "url": "/RickandMorty/static/css/main.621ad74f.chunk.css"
   },
   {
-    "revision": "cc56d8cbf4e48fc1dbc62ac8bc3560fb",
+    "revision": "97750508b60f892294eb928cd974f44e",
     "url": "/RickandMorty/index.html"
   }
 ];
