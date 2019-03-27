@@ -22,6 +22,9 @@
         @include respond(phone){ // width < 600px // cascading - the last one is taken when conflicting and its the smallest so thats what we want as they are all smaller than the above
             top:13rem;
         }
+        @include respond(smlPhone){ // width < 600px // cascading - the last one is taken when conflicting and its the smallest so thats what we want as they are all smaller than the above
+            top:10rem;
+        }
 
      }
     &__heading-sub{
@@ -35,6 +38,9 @@
 
         @include respond(phone){ // width < 600px // cascading - the last one is taken when conflicting and its the smallest so thats what we want as they are all smaller than the above
             top:18rem;
+        }
+        @include respond(smlPhone){ // width < 600px // cascading - the last one is taken when conflicting and its the smallest so thats what we want as they are all smaller than the above
+            top:15rem;
         }
 
      }

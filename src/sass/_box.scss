@@ -27,12 +27,7 @@
         border-radius: 50%;
         background-color: transparent;
 
-        @include respond(tab-land){ // width < 1200px //
-
-        }
-        @include respond(tab-port){ // width < 900px // cascading - the last one is taken when conflicting and its the smallest so thats what we want as they are all smaller than the above
-
-        }
+       
         @include respond(phone){ // width < 600px // cascading - the last one is taken when conflicting and its the smallest so thats what we want as they are all smaller than the above
             padding: 20rem;
         }
@@ -40,26 +35,15 @@
     &, 
     &:link, 
     &:visited, 
-    &:active, 
-    &:focus{
+    &:focus,
+    &:active 
+    {
     background-color: transparent;
     text-decoration: none;
+    outline: none;
     border: none;
     cursor: pointer;
     }
 
-    &:hover{
-        transform: translateY(-.3rem);
-
-    
-       
     }
-
-
-    &:active, 
-    &:focus{
-        outline: none; //Changes for the default <button> element
-     
-    }
-}
 }
