@@ -24,7 +24,7 @@ self.__precacheManifest = [
     "url": "/RickandMorty/static/css/main.672bcb2a.chunk.css"
   },
   {
-    "revision": "d3c0853b791c981c297b4d67b55acfb2",
+    "revision": "fdb38dbf6a64876802669f356a187261",
     "url": "/RickandMorty/index.html"
   }
 ];
